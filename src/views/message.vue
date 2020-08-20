@@ -2,7 +2,7 @@
     <div class="">
         <div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-message"></i> tab选项卡</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-lx-copy"></i> tab选项卡</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
@@ -22,7 +22,7 @@
                         </el-table-column>
                     </el-table>
                     <div class="handle-row">
-                        <el-button type="primary">全部标为已读</el-button>
+                        <el-button type="primary" @click="handleAllRead()">全部标为已读</el-button>
                     </div>
                 </el-tab-pane>
                 <el-tab-pane :label="`已读消息(${read.length})`" name="second">
@@ -107,6 +107,13 @@
             handleRestore(index) {
                 const item = this.recycle.splice(index, 1);
                 this.read = item.concat(this.read);
+            },
+            handleAllRead() {
+                let i = 0
+                do {
+                    let item = this.unread.splice(i, 1)
+                    this.read = item.concat(this.read) 
+                }while(this.unread.length !== 0)
             }
         },
         computed: {
@@ -126,3 +133,4 @@
     margin-top: 30px;
 }
 </style>
+
