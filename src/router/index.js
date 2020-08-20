@@ -56,7 +56,7 @@ const routes = [
       {
         path: '/i18n',
         component: i18n,
-        meta: {title: '语言切换'}
+        meta: {title: 'mock测试'}
       },     
       {
         path: '/upload',

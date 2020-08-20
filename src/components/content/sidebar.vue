@@ -127,7 +127,7 @@ export default {
           {
             icon: 'el-icon-mic',
             index: 'i18n',
-            title: '语言切换'
+            title: 'mock测试'
           },
           {
             title: '预留界面'

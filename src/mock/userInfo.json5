@@ -1,0 +1,6 @@
+
+{
+  id: "@id",
+  user: "@cname()",
+  avatar: "@img('20×20', 'red', '#fff', 'avatar')"
+}

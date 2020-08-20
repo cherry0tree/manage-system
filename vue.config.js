@@ -11,3 +11,10 @@ module.exports = {
     }
   }
 }
+
+//对devserver属性进行配置 监听访问路径与返回数据
+module.exports = {
+  devServer: {
+    before: require('./src/mock/index.js')
+  }
+}
