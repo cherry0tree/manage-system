@@ -71,7 +71,6 @@
       <el-card shadow="hover" style="height:403px;">
         <div slot="header" class="clearfix">
           <span>待办事项</span>
-          <el-button style="float: right; padding: 3px 0" type="text">添加</el-button>
         </div>
         <el-table :show-header="false" :data="todoList" style="width:100%;">
           <el-table-column width="40px">
@@ -84,12 +83,6 @@
               <div class="todo-item" :class="{'todo-item-del': scope.row.status}">
                 {{scope.row.title}}
               </div>
-            </template>
-          </el-table-column>
-          <el-table-column width="60">
-            <template>
-              <i class="el-icon-edit"></i>
-              <i class="el-icon-delete"></i>
             </template>
           </el-table-column>
         </el-table>
@@ -123,11 +116,11 @@ export default {
       name: localStorage.getItem('userName'),
       todoList: [
         {
-          title: '今天要修复10个bug',
+          title: '今天需要修复10个bug',
           status: true
         },
         {
-          title: '今天写几个bug吧',
+          title: '今天需要新增一个功能',
           status: false
         }
       ],
@@ -189,6 +182,11 @@ export default {
   computed: {
     role() {
       return this.name === 'admin' ? '管理员' : '普通用户';
+    }
+  },
+  methods: {
+    handleDelet(){
+      todoList
     }
   }
 }

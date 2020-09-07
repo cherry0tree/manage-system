@@ -10,15 +10,7 @@
   </div>
 
   <div class="container">
-    <div class="handle-box">
-      <el-select placeholder="地址" class="handle-select mr10">
-        <el-option key="1" label="广东省" value="广东省"></el-option>
-        <el-option key="2" label="湖南省" value="湖南省"></el-option>
-      </el-select>
-      <el-input placeholder="用户名" class="handle-input mr10"></el-input>
-      <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
-    </div>
-
+    <div class="table_title">下面的表格数据是从table.json中获取得到的表单数据</div>
     <el-table border class="table" :data="tableData">
       <el-table-column type="selection" width="55" align="center"></el-table-column>
       <el-table-column prop="id" label="ID" width="55" align="center"></el-table-column>
@@ -116,17 +108,13 @@ export default {
     this.getData();
   },
   methods: {
-    //easy-mock数据
+    //table.json
     getData() {
       fetchData(this.query).then(res => {
         console.log(res)
-        console.log(this.$axios)
         this.tableData = res.list;
         this.totalPage = res.totalPage || 50;
       })
-    },
-    handleSearch() {
-
     },
     // 分页导航
     handlePageChange(val) {
@@ -182,5 +170,9 @@ export default {
 }
 .red{
   color: red;
+}
+.table_title{
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 </style>

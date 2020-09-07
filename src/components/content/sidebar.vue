@@ -81,10 +81,6 @@ export default {
                     title: 'markdown编辑器'
                   }
                 ]
-              },
-              {
-                index: 'upload',
-                title: '上传文件'
               }
             ]          
           },
