@@ -23,7 +23,7 @@ router.beforeEach((to,from,next) => {
   if (!role && to.path !== '/login'){
     next('/login');
   } else if(to.meta.permission) {
-    role === 'admin' ? next() : next('/home'); //两句代码实现权限管理
+    role === 'admin' ? next() : next('/403'); //两句代码实现权限管理
   } else {
     next();
   }

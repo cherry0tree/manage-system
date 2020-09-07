@@ -18,7 +18,6 @@ const draglist = () => import('../views/draglist.vue')
 const draglog = () => import('../views/draglog.vue')
 const permission = () => import('../views/permission.vue')
 
-
 const routes = [
   {
      path: '/',
@@ -57,7 +56,12 @@ const routes = [
         path: '/i18n',
         component: i18n,
         meta: {title: 'mock测试'}
-      },     
+      },
+      {
+        path: '/403',
+        component: () => import('../views/403.vue'),
+        meta: {title: '403'}
+      },        
       {
         path: '/upload',
         component: upload,
