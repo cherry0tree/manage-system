@@ -64,6 +64,11 @@ export default {
             title: '系统消息'
           },
           {
+            icon: 'el-icon-document-copy',
+            index: 'svg',
+            title: 'svg测试'
+          },          
+          {
             icon: 'el-icon-tickets',
             index: '3',
             title: '表单相关',

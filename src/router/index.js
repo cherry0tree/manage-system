@@ -17,6 +17,7 @@ const editor = () => import('../views/editor.vue')
 const draglist = () => import('../views/draglist.vue')
 const draglog = () => import('../views/draglog.vue')
 const permission = () => import('../views/permission.vue')
+const svg = () => import('../views/svg.vue')
 
 const routes = [
   {
@@ -91,7 +92,12 @@ const routes = [
         path: '/permission',
         component: permission,
         meta: {title: '权限测试', permission: true}
-      },                    
+      },
+      {
+        path: '/svg',
+        component: svg,
+        meta: {title: 'svg测试'}
+      }                 
     ]
   },
   {
