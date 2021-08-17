@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const login = () => import('../views/login.vue')
+const bigScreen = () => import('../views/bigScreen')
 const home = () => import('../views/home.vue')
 const dashboard = () => import('../views/dashboard.vue')
 const icon = () => import('../views/icon.vue')
@@ -104,8 +105,12 @@ const routes = [
     path: '/login',
     component: login,
     meta: { title: '登录' }
+  },
+  {
+    path: '/bigScreen',
+    component: bigScreen,
+    meta: { title: '大屏' }    
   }
-
 ]
 
 const router = new VueRouter({
